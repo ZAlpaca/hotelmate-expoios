@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-brand-surface: #fbf9f8;
+  --color-brand-surface-dim: #dbd9d9;
+  --color-brand-surface-low: #f5f3f3;
+  --color-brand-surface-container: #efeded;
+  --color-brand-surface-high: #eae8e7;
+  --color-brand-surface-highest: #e4e2e2;
+  
+  --color-brand-on-surface: #1b1c1c;
+  --color-brand-on-surface-variant: #44474d;
+  --color-brand-outline: #75777e;
+  --color-brand-outline-variant: #c5c6cd;
+  
+  --color-brand-primary: #000000;
+  --color-brand-secondary: #735c00;
+  --color-brand-secondary-container: #fed65b;
+  --color-brand-on-secondary-container: #745c00;
+  --color-brand-primary-container: #0d1c32;
+  --color-brand-on-primary-container: #76849f;
+  --color-brand-error: #ba1a1a;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-surface);
+    color: var(--color-brand-on-surface);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.glass-card-dark {
+  background: rgba(13, 28, 50, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Material Symbols icon sizing */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 2,
+  "active_work_id": "mvp-hotel-loyalty-001",
+  "works": {
+    "mvp-hotel-loyalty-001": {
+      "work_id": "mvp-hotel-loyalty-001",
+      "active_plan": ".omo/plans/001-mvp-hotel-loyalty-app.md",
+      "plan_name": "001-mvp-hotel-loyalty-app",
+      "session_ids": ["opencode:ses_09701eb79ffeCFFt3HeRn6fmqA"],
+      "status": "active",
+      "worktree_path": null,
+      "started_at": "2026-07-16T18:57:36.301Z"
+    }
+  }
+}

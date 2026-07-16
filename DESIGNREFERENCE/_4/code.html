@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUMINA Hotels | Главная</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#1b1c1c",
+                      "outline-variant": "#c5c6cd",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed-dim": "#c8c6c2",
+                      "primary-container": "#0d1c32",
+                      "error": "#ba1a1a",
+                      "outline": "#75777e",
+                      "surface-container-highest": "#e4e2e2",
+                      "on-background": "#1b1c1c",
+                      "inverse-surface": "#303030",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "primary": "#000000",
+                      "primary-fixed": "#d6e3ff",
+                      "surface-dim": "#dbd9d9",
+                      "on-primary-fixed-variant": "#39475f",
+                      "on-secondary-container": "#745c00",
+                      "secondary-container": "#fed65b",
+                      "inverse-primary": "#b9c7e4",
+                      "on-tertiary-fixed-variant": "#474744",
+                      "on-tertiary-container": "#848480",
+                      "surface-container-high": "#eae8e7",
+                      "on-tertiary-fixed": "#1b1c19",
+                      "surface-tint": "#515f78",
+                      "on-primary-fixed": "#0d1c32",
+                      "surface-variant": "#e4e2e2",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed": "#ffe088",
+                      "surface-bright": "#fbf9f8",
+                      "secondary-fixed-dim": "#e9c349",
+                      "error-container": "#ffdad6",
+                      "inverse-on-surface": "#f2f0f0",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed": "#241a00",
+                      "background": "#fbf9f8",
+                      "surface-container": "#efeded",
+                      "tertiary-container": "#1b1c19",
+                      "on-secondary-fixed-variant": "#574500",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed": "#e4e2dd",
+                      "surface-container-low": "#f5f3f3",
+                      "on-primary-container": "#76849f",
+                      "surface": "#fbf9f8",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#000000",
+                      "secondary": "#735c00",
+                      "on-surface-variant": "#44474d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-gap-md": "16px",
+                      "stack-gap-sm": "8px",
+                      "container-margin": "20px",
+                      "stack-gap-lg": "32px",
+                      "section-padding": "48px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Playfair Display"],
+                      "body-sm": ["Inter"],
+                      "headline-lg": ["Playfair Display"],
+                      "title-md": ["Inter"],
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "body-lg": ["Inter"],
+                      "label-caps": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "title-md": ["18px", {"lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { display: none; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-lg overflow-x-hidden pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl shadow-[0_30px_60px_-15px_rgba(13,28,50,0.1)] h-16 flex justify-between items-center px-container-margin">
+<div class="flex items-center gap-2 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+<h1 class="font-display-lg text-headline-lg-mobile tracking-widest text-primary uppercase">LUMINA</h1>
+<div class="flex items-center gap-2 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</div>
+</header>
+<main class="pt-20 px-container-margin">
+<!-- Greeting Section -->
+<section class="mt-8 mb-10">
+<p class="font-label-caps text-label-caps text-outline uppercase tracking-widest mb-1">Рады видеть вас снова</p>
+<h2 class="font-display-lg text-headline-lg-mobile text-primary">Добро пожаловать, Алекс</h2>
+</section>
+<!-- Featured Hotels Bento-ish Grid -->
+<section class="mb-section-padding">
+<div class="flex justify-between items-end mb-stack-gap-md">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile">Наши бутик-отели</h3>
+<a class="text-label-caps font-label-caps text-primary border-b border-primary/20 pb-0.5" href="#">Смотреть все</a>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<!-- Hotel 1 (Large Hero) -->
+<div class="relative group overflow-hidden rounded-[2rem] h-[420px] shadow-[0_30px_60px_-15px_rgba(13,28,50,0.1)] border border-outline-variant/20">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-angle architectural shot of a luxury minimalist boutique hotel nestled in a snowy mountain forest. The building features floor-to-ceiling glass walls, warm interior lighting casting a soft glow on the pristine white snow. The sky is a deep twilight navy, creating a serene, quiet luxury atmosphere. High-end modern design, moody lighting, and crystalline clarity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPLg4Zc92faMwXFCKSTGUzGHy8ZS461J-ewcuypA66Vuq0zSQCcb-UdKFUv-XsMwGWJaOvDy85e6TEJe6e686E2V2iLsotei17cUrAPlQ5Q9efGIAWM4-mWzrfvfE8lVyIuXgyl4n1wEHvGcnsLvF8WMO07L1oPkGzpTOYd1xJpsP5mlLkMzrkzAYs8nLZsVNh4clYq9ryEdcRJwP5Pwu_ZTXGtOFSeG-vxeCsO3U3rfqecgsb0zfPNZFEgX3mMnQ_OfaRvXiQIfY')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<div class="glass-card p-6 rounded-2xl border border-white/20">
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Lumina Peak Residence</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Уединение среди заснеженных вершин Альп. Панорамные виды и персональный спа-сервис.</p>
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary">от 45,000₽ / ночь</span>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps text-label-caps active:scale-90 transition-transform">БРОНЬ</button>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Hotel 2 -->
+<div class="relative group overflow-hidden rounded-[2rem] h-[320px] shadow-[0_20px_40px_-10px_rgba(13,28,50,0.08)] border border-outline-variant/20">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An interior shot of a sophisticated Mediterranean beachfront villa with white textured walls and curved archways. Sunlight filters through linen curtains, creating soft shadows on a polished stone floor. Minimalist furniture in beige and cream tones. The mood is airy, peaceful, and exclusive. 8k resolution, high-key lighting, soft focus background of the azure sea." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCo71hmjw2bf30lbHKmJlygsxlTuSNK0oiaeniDDpgwtN8Jc6gy5z7ZplGU5ZJDJoNt92db9vafnxCaWgvvkglvYPuGhk52DsTTWQU9egtVH-teBF3h97c0xL-kfX3kzSqdZZMpvuMn7DSzduWA1lULmp3lquk1mIR0zktwQVku0jprPdTVqqTyBEshTbGmdckT2Q_qlB2gyHLfGkhh5u68XZv1LHP_ft_2bkCbnige4fRi0BdNWacuC8CNiE0L9da5PfSuB4YhxLI')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/40"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<h4 class="font-title-md text-title-md text-white">Azure Cove Villa</h4>
+<p class="font-label-caps text-label-caps text-white/80">Греция, Санторини</p>
+</div>
+</div>
+<!-- Hotel 3 -->
+<div class="relative group overflow-hidden rounded-[2rem] h-[320px] shadow-[0_20px_40px_-10px_rgba(13,28,50,0.08)] border border-outline-variant/20">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A lush tropical garden surrounding a contemporary dark wood pavilion with a private infinity pool. Large palm leaves overlap the frame in the foreground. Golden hour sunlight creates a warm, shimmering effect on the water. The aesthetic is organic luxury, quiet, and deeply private. Deep greens and warm golden tones dominate the palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLBbwNvNAld7kWo42z434DJNMBjek5UITTSx5q0N6xqFMywpXiWxbl4PtAaoOUsZynbPGBCybuz0y0sB5f9eUXBrHFLzTFx4NDoYlyCythylk60xffZAdIof5E5-me180ZWgmq6VvFW5_cpDtDZIQYpZMjHbjh16TxZyXr69tim0TIpkkjSDJJnQSbJMiY3qT8WN0nPHpur_fIYRQw3C0gX_QzdgTI_-1kmvHiBrAZmAPE0OR2fK6Sr4H5ZTR15djYu5UQyMjoETg')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/40"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<h4 class="font-title-md text-title-md text-white">Verdant Sanctuary</h4>
+<p class="font-label-caps text-label-caps text-white/80">Бали, Убуд</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Special Events Carousel -->
+<section class="mb-section-padding">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-6">Особые события</h3>
+<div class="flex overflow-x-auto gap-4 -mx-container-margin px-container-margin pb-6 snap-x">
+<!-- Event Card 1 -->
+<div class="flex-shrink-0 w-[80%] snap-center rounded-3xl bg-surface-container-low p-1 border border-outline-variant/10 shadow-[0_15px_35px_rgba(0,0,0,0.05)]">
+<div class="h-40 w-full rounded-2xl bg-cover bg-center mb-4" data-alt="A close-up of a perfectly set dinner table in a luxury glass-walled restaurant overlooking a city at night. Crystal glasses sparkle under soft amber pendant lights. A single white orchid is in a minimal vase. The atmosphere is romantic, expensive, and quiet. Deep navy and gold accents. Bokeh city lights in the background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDp-hXiEkN7IxYOhTwC3LPwJC1gzBZyXhWDa5hGfU5K-QqtzLKLNmhbvfgUBrjloKAEsqQX4_WwGm9Hhk-2h0DBwZaWWfBoCp274TLU-f8p4TNqlej4aIAL_olbwFDrTqgmGXDTGAXQG3PAarZdupSL3JeI-bo1dLu-HGy6BC1hq1_Nosps3q3jm_dAAp-LGOdofQpLWdNIyNhy0mBgFjvL43clfAxaxaxuFf8Hj6mWiKCZmmkOP_yi3wN7vQ-E4xPf9y4uJ9P7dVk')"></div>
+<div class="px-5 pb-5">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-caps text-[10px] mb-2 uppercase tracking-tighter">Гастрономия</span>
+<h5 class="font-title-md text-title-md text-primary mb-1">Ночь Мишлен</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Эксклюзивный ужин от шеф-повара Марко Пьера в Peak Residence.</p>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="flex-shrink-0 w-[80%] snap-center rounded-3xl bg-surface-container-low p-1 border border-outline-variant/10 shadow-[0_15px_35px_rgba(0,0,0,0.05)]">
+<div class="h-40 w-full rounded-2xl bg-cover bg-center mb-4" data-alt="A high-end wellness retreat scene featuring a minimalist yoga studio with blonde wood floors and massive windows facing a calm forest. Soft morning mist is visible outside. A stack of plush white towels and a stone incense burner sit in the foreground. The lighting is diffused and ethereal, promoting a sense of calm and luxury wellness." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuH0T3MaGpICGAb4Hl6CzljdUX0gYDiUxVfj8wQwtrH6SK4g_647YzhTTgQ6n8X-qhFJi5TP9swzebTHUyWxfTsyHLsXHy0m80mN09llfVVsLWDpf54uyp4dkcx0FKvsoc9l-4D979jmVrPCPN26BIv4DMcbDe4fRPe5Fvth_Gqk3XUPVuy3okyD2ZeTMI0N5gV1ItBjf8XECmA4wFehctG5u2uE9fKT_ID3awjKSWfw1Zgq23gwpt12jQGfptmVZtHfVhlZNt7Wk')"></div>
+<div class="px-5 pb-5">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-caps text-[10px] mb-2 uppercase tracking-tighter">Wellness</span>
+<h5 class="font-title-md text-title-md text-primary mb-1">Ретрит осознанности</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3 дня медитаций и спа-процедур в Verdant Sanctuary.</p>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="flex-shrink-0 w-[80%] snap-center rounded-3xl bg-surface-container-low p-1 border border-outline-variant/10 shadow-[0_15px_35px_rgba(0,0,0,0.05)]">
+<div class="h-40 w-full rounded-2xl bg-cover bg-center mb-4" data-alt="A classic jazz lounge with velvet armchairs, dark wood paneling, and a gleaming black grand piano. A double bass stands in the corner. Warm, dim spotlighting creates a moody, sophisticated club atmosphere. Gold leaf details on the ceiling. Quiet luxury aesthetic for an evening of live music." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAubvZ6cAvBwsQD12DsdWmAbvvprv-o9EgYKTgnB5Rs5QPNKYWzFn0c_hKo_lWvdT6tX4a-fgwNWl4-5xDy7K6Hx97azQCkFfrj3CY2cTSqTklGQkNyxjBsVm6Il-HbhDoPzYlaoThYOE5zPQ_h3FdOAbSYeW1_J25R_p9wDK1WcZS6x2Tg7ttceJXhzhBk_2FoL3NDI7Yw6trD5jJ60si90Ng94kEH_ltYeaofgabiLBppwPSfNKwn8X_qm1dN9s_oAqXMuRAkLYs')"></div>
+<div class="px-5 pb-5">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-caps text-[10px] mb-2 uppercase tracking-tighter">Музыка</span>
+<h5 class="font-title-md text-title-md text-primary mb-1">Вечер джаза</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Живой звук и авторские коктейли в Azure Cove Lounge.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Membership -->
+<section class="mb-10 p-8 rounded-[2.5rem] bg-primary text-on-primary relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-4">Lumina Circle</h3>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim mb-6">Получите доступ к закрытым бронированиям и эксклюзивным привилегиям нашего клуба.</p>
+<button class="w-full bg-white text-primary py-4 rounded-2xl font-title-md text-title-md active:scale-95 transition-all">Вступить в клуб</button>
+</div>
+<!-- Decorative circle -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary-fixed/10 rounded-full blur-3xl"></div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-container-margin bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl border-t border-outline-variant/30 shadow-[0_-10px_40px_rgba(13,28,50,0.05)] z-50 pb-safe">
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed scale-110 active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">home_max</span>
+<span class="font-body-sm text-label-caps uppercase tracking-widest text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">auto_awesome</span>
+<span class="font-body-sm text-label-caps uppercase tracking-widest text-[10px]">Offers</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">person_pin</span>
+<span class="font-body-sm text-label-caps uppercase tracking-widest text-[10px]">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple parallax or scroll interactions can go here
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            // Add basic animations to cards on scroll
+            document.querySelectorAll('.rounded-3xl, .rounded-\\[2\\.5rem\\]').forEach(el => {
+                el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>

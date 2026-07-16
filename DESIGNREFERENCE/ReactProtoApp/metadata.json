@@ -1,0 +1,6 @@
+{
+  "name": "Lumina Luxury Hotels",
+  "description": "Boutique hospitality platform of Lumina Hotels. Explore exclusive retreats, reserve luxury rooms, book curated gastronomic events, and join the Lumina Circle club.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

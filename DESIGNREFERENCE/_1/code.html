@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUMINA - Профиль лояльности</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#1b1c1c",
+                    "outline-variant": "#c5c6cd",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#c8c6c2",
+                    "primary-container": "#0d1c32",
+                    "error": "#ba1a1a",
+                    "outline": "#75777e",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-background": "#1b1c1c",
+                    "inverse-surface": "#303030",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#b9c7e4",
+                    "primary": "#000000",
+                    "primary-fixed": "#d6e3ff",
+                    "surface-dim": "#dbd9d9",
+                    "on-primary-fixed-variant": "#39475f",
+                    "on-secondary-container": "#745c00",
+                    "secondary-container": "#fed65b",
+                    "inverse-primary": "#b9c7e4",
+                    "on-tertiary-fixed-variant": "#474744",
+                    "on-tertiary-container": "#848480",
+                    "surface-container-high": "#eae8e7",
+                    "on-tertiary-fixed": "#1b1c19",
+                    "surface-tint": "#515f78",
+                    "on-primary-fixed": "#0d1c32",
+                    "surface-variant": "#e4e2e2",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#ffe088",
+                    "surface-bright": "#fbf9f8",
+                    "secondary-fixed-dim": "#e9c349",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#241a00",
+                    "background": "#fbf9f8",
+                    "surface-container": "#efeded",
+                    "tertiary-container": "#1b1c19",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e4e2dd",
+                    "surface-container-low": "#f5f3f3",
+                    "on-primary-container": "#76849f",
+                    "surface": "#fbf9f8",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#000000",
+                    "secondary": "#735c00",
+                    "on-surface-variant": "#44474d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-gap-md": "16px",
+                    "stack-gap-sm": "8px",
+                    "container-margin": "20px",
+                    "stack-gap-lg": "32px",
+                    "section-padding": "48px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Playfair Display"],
+                    "title-md": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "title-md": ["18px", {"lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(224, 224, 224, 0.5);
+            box-shadow: 0 30px 60px -15px rgba(13, 28, 50, 0.05);
+        }
+        .scroll-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-switch:checked + .switch-dot {
+            transform: translateX(100%);
+            background-color: #000000;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-lg overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl shadow-[0_30px_60px_-15px_rgba(13,28,50,0.1)] flex justify-between items-center px-container-margin h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="hover:opacity-70 transition-opacity active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+<h1 class="font-display-lg text-headline-lg-mobile tracking-widest text-primary dark:text-primary-fixed uppercase">LUMINA</h1>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-70 transition-opacity active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-container-margin">
+<!-- Profile Hero Section -->
+<section class="mb-stack-gap-lg">
+<div class="flex items-center gap-6 mb-8">
+<div class="relative group">
+<div class="w-20 h-20 rounded-full overflow-hidden border-2 border-secondary p-0.5">
+<img class="w-full h-full object-cover rounded-full" data-alt="Close-up portrait of a sophisticated man named Алексей Иванов for a luxury hotel profile. He is smiling warmly in soft, natural morning light within a minimalist, high-end interior. The visual style is polished, airy, and professional, utilizing a quiet luxury aesthetic with neutral tones and clean lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyKifMdrvQKUtGTstVkvU_yFRKZX2T70xCYY1UMmdk-M3yqaHYjqryLLZgRYhv0a9nQ3mRUBKflCq7K6BTtmk2-VnZOC8p6Nv__jsRv9oMhAlPGefBuKPIqHH8C35K4qeMcrTi1gg4wyi-LtFinoP3MCPGznq5c4WFqFA_HNWol6soMpRT882fpFPfMly5SD43wCuX7NEG1EZ5Bev7J5GUNBaXmRi9RHfBSkEJMFyfHKTv0X8WftBezlN_TjEi8n-mm0Fd4vgLom8"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-secondary text-on-secondary-fixed rounded-full p-1 border-2 border-surface">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-1">Алексей Иванов</h2>
+<p class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Gold Member</p>
+</div>
+</div>
+<!-- Loyalty Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-gap-md">
+<div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-outline uppercase mb-2">Бонусные баллы</p>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-headline-lg text-primary">1 500</span>
+<span class="font-body-sm text-body-sm text-outline">баллов</span>
+</div>
+</div>
+<div class="mt-6">
+<div class="flex justify-between items-center mb-2">
+<p class="font-body-sm text-body-sm text-on-surface">До уровня Platinum</p>
+<p class="font-body-sm text-body-sm text-outline">500 баллов</p>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-3/4 rounded-full transition-all duration-1000 ease-out" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-xl h-48 md:h-full bg-primary-container group">
+<div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="A wide architectural shot of a stunning, infinity-edge swimming pool at a boutique luxury hotel during golden hour. The water reflects a sunset of warm gold and navy blue. The surrounding deck features minimalist loungers and tropical plants, embodying the Lumina brand's quiet luxury and serenity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_s-DmOafR5dY3PmHVSHMPJAMD-667_C6AjwrAMvkrcFTQ7sy0_QzUYluyZQlIlDPsNyIP4kHrz4c61380ONWSeMF5CgMiTXDa0xKGdtXI4IP7C2hhyLF1cmxeNi0lyE5wcIgd0_qR6LjaYwE2QqI4_bIpOPfH4U_vVmoF7zhhLp0MDxStrOGh33VgZlfPNto77GAm4joRKBemMJxR3D0lecFCf87rn_p6IN8zhPMjVfSgxC9JQ8F1P2chm6R2V04jgxv9w8BpQog"/>
+</div>
+<div class="relative z-10 p-6 h-full flex flex-col justify-end text-white">
+<p class="font-label-caps text-label-caps uppercase text-secondary-fixed mb-1">Ваша награда</p>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile leading-tight mb-2">Бесплатный SPA-день</h3>
+<button class="w-fit bg-white text-primary px-4 py-2 rounded-full font-label-caps text-[10px] uppercase tracking-wider hover:bg-secondary transition-colors">Активировать</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking History Section -->
+<section class="mb-stack-gap-lg">
+<div class="flex justify-between items-end mb-6">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">История бронирований</h3>
+<button class="font-label-caps text-label-caps text-outline uppercase hover:text-primary transition-colors border-b border-outline/30">Все</button>
+</div>
+<div class="space-y-4">
+<!-- Booking Card 1 -->
+<div class="glass-card rounded-xl p-4 flex gap-4 items-center">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Minimalist luxury hotel suite interior with a plush king-sized bed, soft linen, and large floor-to-ceiling windows showing a mountain view. The color palette is neutral off-white and charcoal, creating a calm, high-end atmosphere for a booking history thumbnail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwbBFKqL_G83I3pHF-Q2LiRszGu-k9Af50vm43ooDZUXY9WyY3rW6KhPR-U0_ho8vdt_lZQy-NmZFjEtQ-Lv1SB8geObQPeG2uLQfykEceiGAaHnW-C3Tk1rx2AqkErA9tohjADlKLEhBkLF1nD0orfrudYQDenFbQqsaW7IV9RElWWZDSpkLjq2au4rcKOg0zYlaFRSseFzobExiAlgKAOQcniRhpGM9rU3gYXncKOgcfCrMsFjbzsur59_-IlTEgbsSq02df1qU"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h4 class="font-title-md text-title-md text-primary">Lumina Grand Suite</h4>
+<span class="font-label-caps text-[10px] bg-surface-container-high px-2 py-0.5 rounded uppercase">Завершено</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-1">12 мая — 15 мая, 2024</p>
+<p class="font-label-caps text-[10px] text-secondary mt-2 uppercase tracking-tighter">+250 баллов начислено</p>
+</div>
+</div>
+<!-- Booking Card 2 -->
+<div class="glass-card rounded-xl p-4 flex gap-4 items-center opacity-80">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Abstract interior detail of a luxury hotel lobby featuring a travertine wall and a sculptural gold light fixture. The lighting is soft and ambient, emphasizing textures and the quiet luxury aesthetic. High-key light-mode atmosphere with elegant shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRKgU_6SfMczSFtvzixybj9FRA89snxkk_RltLhIi82DgMzqJQv-QMtjI4tZnWUJlZFN_RXP_VrJbkeW7oZnOK3DMHNqOMlzUxJ3aHgdwLxaHGre_hbJojxPuqeK4TGdyPgb9P0bpPmg2sTucSuaSbrIwZx7FbyZsDjnChuSxdjtKupJzmaHwfHNWQedEn0GHm30l8oMVOF0e_UPdcNWIsZU7oDMmCwqWbcnUSanwIFsowkjN4GeqMn48kgTdPgPw4Mdql6WflK4Q"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h4 class="font-title-md text-title-md text-primary">Deluxe Garden Room</h4>
+<span class="font-label-caps text-[10px] bg-surface-container-high px-2 py-0.5 rounded uppercase">Завершено</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-1">10 марта — 12 марта, 2024</p>
+<p class="font-label-caps text-[10px] text-secondary mt-2 uppercase tracking-tighter">+180 баллов начислено</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Notification Settings -->
+<section class="mb-stack-gap-lg">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-6">Настройки уведомлений</h3>
+<div class="glass-card rounded-xl overflow-hidden divide-y divide-outline-variant/20">
+<div class="p-5 flex justify-between items-center">
+<div>
+<p class="font-title-md text-title-md text-primary">Push-уведомления</p>
+<p class="font-body-sm text-body-sm text-outline">Спецпредложения и новости</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only custom-switch" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full transition-colors duration-300"></div>
+<div class="switch-dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform duration-300 shadow-sm border border-outline-variant/30"></div>
+</label>
+</div>
+<div class="p-5 flex justify-between items-center">
+<div>
+<p class="font-title-md text-title-md text-primary">Статус бронирования</p>
+<p class="font-body-sm text-body-sm text-outline">Изменения и подтверждения</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only custom-switch" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full transition-colors duration-300"></div>
+<div class="switch-dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform duration-300 shadow-sm border border-outline-variant/30"></div>
+</label>
+</div>
+<div class="p-5 flex justify-between items-center">
+<div>
+<p class="font-title-md text-title-md text-primary">Консьерж-сервис</p>
+<p class="font-body-sm text-body-sm text-outline">Сообщения во время проживания</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only custom-switch" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full transition-colors duration-300"></div>
+<div class="switch-dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform duration-300 shadow-sm border border-outline-variant/30"></div>
+</label>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl border-t border-outline-variant/30 h-20 px-container-margin flex justify-around items-center shadow-[0_-10px_40px_rgba(13,28,50,0.05)] pb-safe">
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">home_max</span>
+<span class="font-body-sm text-label-caps uppercase tracking-widest text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">auto_awesome</span>
+<span class="font-body-sm text-label-caps uppercase tracking-widest text-[10px]">Offers</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed scale-110 active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person_pin</span>
+<span class="font-body-sm text-label-caps uppercase tracking-widest text-[10px]">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions and effects
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+                card.style.transition = 'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        // Toggle Switch functionality simulated (UI only)
+        document.querySelectorAll('.custom-switch').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                const bg = this.nextElementSibling;
+                if(this.checked) {
+                    bg.classList.add('bg-secondary');
+                    bg.classList.remove('bg-surface-container-highest');
+                } else {
+                    bg.classList.remove('bg-secondary');
+                    bg.classList.add('bg-surface-container-highest');
+                }
+            });
+            // Init state
+            if(toggle.checked) {
+                toggle.nextElementSibling.classList.add('bg-secondary');
+            }
+        });
+    </script>
+</body></html>

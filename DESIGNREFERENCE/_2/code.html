@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUMINA - Уведомления и Предложения</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#1b1c1c",
+                      "outline-variant": "#c5c6cd",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed-dim": "#c8c6c2",
+                      "primary-container": "#0d1c32",
+                      "error": "#ba1a1a",
+                      "outline": "#75777e",
+                      "surface-container-highest": "#e4e2e2",
+                      "on-background": "#1b1c1c",
+                      "inverse-surface": "#303030",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "primary": "#000000",
+                      "primary-fixed": "#d6e3ff",
+                      "surface-dim": "#dbd9d9",
+                      "on-primary-fixed-variant": "#39475f",
+                      "on-secondary-container": "#745c00",
+                      "secondary-container": "#fed65b",
+                      "inverse-primary": "#b9c7e4",
+                      "on-tertiary-fixed-variant": "#474744",
+                      "on-tertiary-container": "#848480",
+                      "surface-container-high": "#eae8e7",
+                      "on-tertiary-fixed": "#1b1c19",
+                      "surface-tint": "#515f78",
+                      "on-primary-fixed": "#0d1c32",
+                      "surface-variant": "#e4e2e2",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed": "#ffe088",
+                      "surface-bright": "#fbf9f8",
+                      "secondary-fixed-dim": "#e9c349",
+                      "error-container": "#ffdad6",
+                      "inverse-on-surface": "#f2f0f0",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed": "#241a00",
+                      "background": "#fbf9f8",
+                      "surface-container": "#efeded",
+                      "tertiary-container": "#1b1c19",
+                      "on-secondary-fixed-variant": "#574500",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed": "#e4e2dd",
+                      "surface-container-low": "#f5f3f3",
+                      "on-primary-container": "#76849f",
+                      "surface": "#fbf9f8",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#000000",
+                      "secondary": "#735c00",
+                      "on-surface-variant": "#44474d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-gap-md": "16px",
+                      "stack-gap-sm": "8px",
+                      "container-margin": "20px",
+                      "stack-gap-lg": "32px",
+                      "section-padding": "48px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Playfair Display"],
+                      "body-sm": ["Inter"],
+                      "headline-lg": ["Playfair Display"],
+                      "title-md": ["Inter"],
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "body-lg": ["Inter"],
+                      "label-caps": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "title-md": ["18px", {"lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        body {
+            background-color: #fbf9f8;
+            color: #1b1c1c;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-24">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl shadow-[0_30px_60px_-15px_rgba(13,28,50,0.1)]">
+<div class="flex justify-between items-center px-container-margin h-16 w-full">
+<button class="text-primary dark:text-primary-fixed hover:opacity-70 transition-opacity active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="font-display-lg text-headline-lg-mobile tracking-widest text-primary dark:text-primary-fixed uppercase">LUMINA</div>
+<button class="text-primary dark:text-primary-fixed hover:opacity-70 transition-opacity active:scale-95 transition-transform duration-200 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 block h-2.5 w-2.5 rounded-full bg-secondary ring-2 ring-surface"></span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-container-margin max-w-2xl mx-auto">
+<!-- Section Header -->
+<div class="mb-stack-gap-lg">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Предложения для Вас</h1>
+<p class="font-body-sm text-body-sm text-outline">Персональные уведомления и эксклюзивные акции отеля</p>
+</div>
+<!-- Offers Feed -->
+<div class="space-y-stack-gap-md">
+<!-- Offer Card 1: Weekend Sale -->
+<div class="group relative overflow-hidden rounded-xl glass-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A luxury hotel suite with floor-to-ceiling windows overlooking a sunset city skyline. The interior features minimalist deep navy furniture and gold accents, capturing a high-end quiet luxury aesthetic. Soft golden hour lighting fills the room, emphasizing a serene and exclusive atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBharNugewK7YD5GzkG3QiM8bGP-rTXTPFuMPYK1hjVGnN_oGUWJ1iTrn424QJ2ZbkwVRZmQrfwu8KIM8vCnlKmPOh8pY9957J7-bxpA5JDUM0PH9Dm9dyUW8__VYFjbCZiFG7bop3FpNj5cI8IrHTfICIUwUzUUARr7Q47fCucGrQmAKrSc4KxScbnni-z05J2A1zlMwVh_q-NdWBu-ZZGnMtL9mZw0W4N-r8zCubpnQbb71j69Vnh0JVMe4VG4QRyFGxlzM_lmCM"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary text-on-secondary-fixed px-3 py-1 rounded-full font-label-caps text-label-caps uppercase">-20% Акция</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-title-md text-title-md text-primary">Распродажа выходного дня</h2>
+<span class="font-body-sm text-body-sm text-outline">2 ч. назад</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                        Забронируйте проживание на ближайшие выходные и получите скидку 20% на люксы категории Premium.
+                    </p>
+<button class="w-full py-3 bg-primary text-on-primary rounded-xl font-label-caps text-label-caps uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all">
+                        Забронировать сейчас
+                    </button>
+</div>
+</div>
+<!-- Offer Card 2: Wine Tasting -->
+<div class="glass-card rounded-xl p-5 flex gap-4 transition-all hover:shadow-lg">
+<div class="flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a crystal wine glass being filled with rich red wine in a dimly lit, sophisticated lounge. The background shows blurred silhouettes of elegant guests and warm candlelight, reflecting the quiet luxury and boutique hotel experience. Deep shadows and warm highlights create a moody, exclusive vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBauJB1EkBaCnnGKzUcnjW0DaLBsjCdL57ZtwBXls2-CUDP1hblRL9CD_dRYJUUWX2IQli2ZIQth0zeJEigW37fOxTCPSr3C8jtUWjgmNAQeGmx_uqsU2CeaIzfGtKe6vBca5orhdYwlhZD_kj4rf4WvpM_lFrjWf8RHLFyNum6dI8dgENGs-B6ehv-zNo3E3dlw0OPyoOgxkToaYPFRMi_0ijTkPpHae_f85sfADVKSZOvB61bezHJQAXq44aGiSWXmNixAOwyR9w"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h2 class="font-title-md text-title-md text-primary">Дегустация вин</h2>
+<span class="font-body-sm text-body-sm text-outline">Вчера</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                        Приглашаем вас в четверг на вечер коллекционных вин в нашем лобби-баре.
+                    </p>
+<div class="mt-3 flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-caps text-label-caps">Четверг, 19:00</span>
+</div>
+</div>
+</div>
+<!-- Offer Card 3: Pool Party -->
+<div class="group relative overflow-hidden rounded-xl glass-card transition-all duration-300 hover:shadow-xl">
+<div class="aspect-[21/9] w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A pristine outdoor infinity pool at night, lit with subtle turquoise underwater lights. White minimalist lounge chairs surround the deck, and soft ambient glowing orbs float in the water. The overall aesthetic is calm, sophisticated, and deeply welcoming, embodying the boutique hotel concierge style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDubhS-ReE910QZeW5eD5VL-yNoktFhpTS702SJh6bRQjySoy6iYob0ckJAZSk4pNB3o-4JSVsO9syf-tFXY0fgjmP85LUuE0kZPfURQxihq4ON0hdXBGSQ_7LvSid2BgDlgXjZPLl5p1OT536RdM6HNueJVfnikAKbXVuSXIW5OHTk24nW3m2GcUFX-zyCXfWkTGR-haGdIrGKYLFqVX0dJk42yS3qqk5nCPFz-Igp5TLvOwIAe5RfuVe8-D0nHDe-4AmgJeRwAG0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<h2 class="font-title-md text-title-md text-white">Вечеринка у бассейна</h2>
+<p class="font-body-sm text-body-sm text-white/80">Эту пятницу • DJ &amp; Коктейли</p>
+</div>
+</div>
+<div class="p-4 flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-outline">3 дня назад</span>
+<button class="flex items-center gap-2 text-primary font-label-caps text-label-caps uppercase border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors">
+                        Подробнее <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Offer Card 4: Announcement (Text Only) -->
+<div class="glass-card rounded-xl p-6 border-l-4 border-secondary">
+<div class="flex items-start gap-4">
+<div class="bg-secondary/10 p-2 rounded-full text-secondary">
+<span class="material-symbols-outlined">info</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h2 class="font-title-md text-title-md text-primary">Обновление меню SPA</h2>
+<span class="font-body-sm text-body-sm text-outline">4 дня назад</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                            Мы добавили новые ритуалы на основе натуральных масел из Прованса. Ознакомьтесь с обновленным каталогом услуг.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Filler -->
+<div class="mt-stack-gap-lg text-center pb-stack-gap-lg">
+<p class="font-body-sm text-body-sm text-outline-variant">Больше уведомлений нет</p>
+</div>
+</main>
+<!-- BottomNavBar from JSON -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-container-margin bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl border-t border-outline-variant/30 shadow-[0_-10px_40px_rgba(13,28,50,0.05)] z-50 pb-safe">
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">home_max</span>
+<span class="font-body-sm text-label-caps uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed scale-110 active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-body-sm text-label-caps uppercase tracking-widest mt-1">Offers</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">person_pin</span>
+<span class="font-body-sm text-label-caps uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction: Mark as read on click
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.add('opacity-80');
+                const badge = this.querySelector('.bg-secondary');
+                if (badge && badge.innerText.includes('Акция')) {
+                    // Keep special badges
+                } else {
+                    this.style.borderLeftColor = '#c5c6cd'; // Gray out info border
+                }
+            });
+        });
+    </script>
+</body></html>
