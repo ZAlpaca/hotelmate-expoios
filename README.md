@@ -20,20 +20,6 @@ Hotel loyalty mobile application.
   <img src="screenshots/IMG_0841.png" width="220"/>
 </p>
 
-## Screenshots
-
-| Login | Home |
-|-------|------|
-| ![](screenshots/IMG_0837.png) | ![](screenshots/IMG_0838.png) |
-
-| Bonuses | Events |
-|---------|--------|
-| ![](screenshots/IMG_0839.png) | ![](screenshots/IMG_0840.png) |
-
-| Profile |
-|---------|
-| ![](screenshots/IMG_0841.png) |
-
 ## Features
 
 - Loyalty program
